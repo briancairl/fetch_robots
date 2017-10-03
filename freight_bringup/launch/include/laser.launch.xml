@@ -13,6 +13,11 @@
   <node name="sick_tim_filter" pkg="fetch_drivers" type="laser_filter">
     <remap from="in" to="base_scan_raw" />
     <remap from="out" to="base_scan" />
-  </node>
 
+    <!-- Laser self filter parameters -->
+    <rosparam ns="/laser_self_filter">
+      padding_size: 3
+      min_step_size: 0.0001
+    </rosparam>
+  </node>
 </launch>
